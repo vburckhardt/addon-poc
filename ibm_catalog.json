@@ -3,7 +3,7 @@
 		{
 			"label": "Gen AI",
 			"name": "Gen_AI",
-			"version": "0.0.2-draft",
+			"version": "1.0.2",
 			"product_kind": "solution",
 			"tags": [
 				"watson"
@@ -168,13 +168,7 @@
 								"instances"
 							],
 							"catalog_id": "0fbd7aba-de09-43bf-b848-ade81f4ad0ff",
-							"optional": true,
-							"input_mapping": [
-								{
-									"dependency_output": "cloud_monitoring_crn",
-									"version_input": "existing_en_instance_crn"
-								}
-							]
+							"optional": true
 						},
 						{
 							"name": "Core_Security_Services",
@@ -204,7 +198,7 @@
 							"input_mapping": [
 								{
 									"dependency_output": "workload_resource_group_name",
-									"version_input": "resource_group_name"
+									"version_input": "existing_resource_group_name"
 								}
 							]
 						}
@@ -215,12 +209,6 @@
 							"type": "string",
 							"default_value": "us-south",
 							"required": false
-						},
-						{
-							"key": "resource_group_name",
-							"type": "string",
-							"default_value": "",
-							"required": true
 						},
 						{
 							"key": "elasticsearch_plan",
@@ -239,6 +227,12 @@
 							"type": "string",
 							"default_value": "",
 							"required": false
+						},
+						{
+							"key": "existing_resource_group_name",
+							"type": "string",
+							"default_value": "default",
+							"required": true
 						}
 					],
 					"install_type": "extension"
