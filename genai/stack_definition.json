@@ -1,0 +1,151 @@
+{
+	"inputs": [
+		{
+			"name": "region",
+			"required": false,
+			"type": "string",
+			"hidden": false,
+			"default": "us-south",
+			"custom_config": {}
+		},
+		{
+			"name": "resource_group_name",
+			"required": true,
+			"type": "string",
+			"hidden": false,
+			"default": "ref:../../members/1 - Account Infrastructure Base/outputs/workload_resource_group_name",
+			"custom_config": {}
+		},
+		{
+			"name": "elasticsearch_plan",
+			"required": false,
+			"type": "string",
+			"hidden": false,
+			"default": "enterprise",
+			"custom_config": {}
+		},
+		{
+			"name": "prefix",
+			"required": true,
+			"type": "string",
+			"hidden": false,
+			"default": "genai",
+			"custom_config": {}
+		},
+		{
+			"name": "existing_kms_instance_crn",
+			"required": false,
+			"type": "string",
+			"hidden": false,
+			"custom_config": {}
+		}
+	],
+	"members": [
+		{
+			"inputs": [
+				{
+					"name": "ibmcloud_api_key",
+					"value": ""
+				},
+				{
+					"name": "location",
+					"value": "ref:../../inputs/location"
+				},
+				{
+					"name": "watson_machine_learning_plan",
+					"value": "v2-standard"
+				},
+				{
+					"name": "watson_studio_plan",
+					"value": "professional-v1"
+				},
+				{
+					"name": "watson_discovery_plan",
+					"value": "do not install"
+				},
+				{
+					"name": "watsonx_assistant_plan",
+					"value": "plus"
+				},
+				{
+					"name": "watsonx_governance_plan",
+					"value": "do not install"
+				}
+			],
+			"name": "1 - WatsonX SaaS services",
+			"version_locator": "0fbd7aba-de09-43bf-b848-ade81f4ad0ff.615f156b-55b4-4e47-9470-a8213e1767d3-global"
+		},
+		{
+			"inputs": [
+				{
+					"name": "use_existing_resource_group",
+					"value": "true"
+				},
+				{
+					"name": "resource_group_name",
+					"value": "ref:../../inputs/resource_group_name"
+				},
+				{
+					"name": "prefix",
+					"value": "ref:../../inputs/prefix"
+				},
+				{
+					"name": "region",
+					"value": "ref:../../inputs/region"
+				},
+				{
+					"name": "plan",
+					"value": "ref:../../inputs/elasticsearch_plan"
+				},
+				{
+					"name": "elasticsearch_version",
+					"value": "8.12"
+				},
+				{
+					"name": "member_host_flavor",
+					"value": "b3c.4x16.encrypted"
+				},
+				{
+					"name": "service_credential_names",
+					"value": "{\"elastic_db_admin\":\"Administrator\",\"toolchain_db_user\":\"Editor\",\"wxasst_db_user\":\"Editor\"}"
+				},
+				{
+					"name": "kms_endpoint_type",
+					"value": "private"
+				},
+				{
+					"name": "existing_kms_instance_crn",
+					"value": "ref:../../inputs/existing_kms_instance_crn"
+				}
+			],
+			"name": "2 - Databases for Elasticsearch",
+			"version_locator": "0fbd7aba-de09-43bf-b848-ade81f4ad0ff.156f4d5b-c57b-48aa-b26e-fa791606105e-global"
+		}
+	],
+	"outputs": [
+		{
+			"name": "elasticsearch_hostname"
+		},
+		{
+			"name": "elasticsearch_port"
+		},
+		{
+			"name": "elasticsearch_service_credentials_json"
+		},
+		{
+			"name": "elasticsearch_crn"
+		},
+		{
+			"name": "watsonx_project_url"
+		},
+		{
+			"name": "watsonx_project_id"
+		},
+		{
+			"name": "watson_discovery_api_url"
+		},
+		{
+			"name": "watson_discovery_project_id"
+		}
+	]
+}
