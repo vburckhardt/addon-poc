@@ -2,8 +2,8 @@
 	"products": [
 		{
 			"label": "IBM Cloud Essential Security and Observability Services",
-			"name": "deploy-arch-ibm-core-security-svcs",
-			"version": "1.3.3",
+			"name": "Core_Security_Services",
+			"version": "1.3.4",
 			"product_kind": "solution",
 			"tags": [
 				"security",
