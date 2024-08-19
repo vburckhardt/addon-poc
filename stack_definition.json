@@ -50,7 +50,7 @@
 				},
 				{
 					"name": "location",
-					"value": "ref:../../inputs/location"
+					"value": "ref:../../inputs/region"
 				},
 				{
 					"name": "watson_machine_learning_plan",
