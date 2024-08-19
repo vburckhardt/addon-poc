@@ -80,6 +80,15 @@
 			"default": "security-compliance-center-standard-plan",
 			"description": "The pricing plan to use for the IBM Cloud Security and Compliance Center.",
 			"custom_config": {}
+		},
+		{
+			"name": "cloud_monitoring_crn",
+			"required": false,
+			"type": "string",
+			"hidden": false,
+			"default": "__NULL__",
+			"description": "The crn of an existing cloud monitoring instance.",
+			"custom_config": {}
 		}
 	],
 	"members": [

@@ -3,7 +3,7 @@
 		{
 			"label": "IBM Cloud Essential Security and Observability Services",
 			"name": "deploy-arch-ibm-core-security-svcs",
-			"version": "1.3.2",
+			"version": "1.3.3",
 			"product_kind": "solution",
 			"tags": [
 				"security",
@@ -168,7 +168,7 @@
 								"instances"
 							],
 							"catalog_id": "0fbd7aba-de09-43bf-b848-ade81f4ad0ff",
-							"optional": true,							
+							"optional": true,
 							"input_mapping": [
 								{
 									"dependency_output": "cloud_monitoring_crn",
@@ -183,7 +183,7 @@
 								"standard"
 							],
 							"catalog_id": "0fbd7aba-de09-43bf-b848-ade81f4ad0ff",
-							"optional": true,							
+							"optional": true,
 							"input_mapping": [
 								{
 									"dependency_output": "security_group_group_name",
@@ -299,6 +299,13 @@
 									"value": "security-compliance-center-trial-plan"
 								}
 							]
+						},
+						{
+							"key": "cloud_monitoring_crn",
+							"type": "string",
+							"default_value": "__NULL__",
+							"description": "The crn of an existing cloud monitoring instance.",
+							"required": false
 						}
 					],
 					"install_type": "extension"
