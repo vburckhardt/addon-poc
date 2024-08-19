@@ -9,11 +9,11 @@
 			"custom_config": {}
 		},
 		{
-			"name": "resource_group_name",
+			"name": "existing_resource_group_name",
 			"required": true,
 			"type": "string",
 			"hidden": false,
-			"default": "",
+			"default": "default",
 			"custom_config": {}
 		},
 		{
@@ -49,8 +49,24 @@
 					"value": ""
 				},
 				{
+					"name": "watsonx_admin_api_key",
+					"value": "ref:../../inputs/watsonx_admin_api_key"
+				},
+				{
+					"name": "resource_group_name",
+					"value": "ref:../../inputs/existing_resource_group_name"
+				},
+				{
 					"name": "location",
 					"value": "ref:../../inputs/region"
+				},
+				{
+					"name": "resource_prefix",
+					"value": "ref:../../inputs/prefix"
+				},
+				{
+					"name": "use_existing_resource_group",
+					"value": true
 				},
 				{
 					"name": "watson_machine_learning_plan",
@@ -62,7 +78,7 @@
 				},
 				{
 					"name": "watson_discovery_plan",
-					"value": "do not install"
+					"value": "plus"
 				},
 				{
 					"name": "watsonx_assistant_plan",
@@ -71,6 +87,10 @@
 				{
 					"name": "watsonx_governance_plan",
 					"value": "do not install"
+				},
+				{
+					"name": "watsonx_project_name",
+					"value": "ref:../../inputs/prefix"
 				}
 			],
 			"name": "1 - WatsonX SaaS services",
@@ -80,11 +100,11 @@
 			"inputs": [
 				{
 					"name": "use_existing_resource_group",
-					"value": "true"
+					"value": true
 				},
 				{
 					"name": "resource_group_name",
-					"value": "ref:../../inputs/resource_group_name"
+					"value": "ref:../../inputs/existing_resource_group_name"
 				},
 				{
 					"name": "prefix",
