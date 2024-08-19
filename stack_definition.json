@@ -13,7 +13,7 @@
 			"required": true,
 			"type": "string",
 			"hidden": false,
-			"default": "ref:../../members/1 - Account Infrastructure Base/outputs/workload_resource_group_name",
+			"default": "",
 			"custom_config": {}
 		},
 		{
@@ -29,7 +29,7 @@
 			"required": true,
 			"type": "string",
 			"hidden": false,
-			"default": "genai",
+			"default": "rag",
 			"custom_config": {}
 		},
 		{
@@ -37,6 +37,7 @@
 			"required": false,
 			"type": "string",
 			"hidden": false,
+			"default": "",
 			"custom_config": {}
 		}
 	],

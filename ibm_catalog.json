@@ -3,7 +3,7 @@
 		{
 			"label": "Gen AI",
 			"name": "Gen_AI",
-			"version": "1.0.0",
+			"version": "0.0.2-draft",
 			"product_kind": "solution",
 			"tags": [
 				"watson"
@@ -219,7 +219,7 @@
 						{
 							"key": "resource_group_name",
 							"type": "string",
-							"default_value": "ref:../../members/1 - Account Infrastructure Base/outputs/workload_resource_group_name",
+							"default_value": "",
 							"required": true
 						},
 						{
@@ -237,7 +237,7 @@
 						{
 							"key": "existing_kms_instance_crn",
 							"type": "string",
-							"default_value": "ref:../../members/2a - Security Service - Key Management/outputs/kms_instance_crn",
+							"default_value": "",
 							"required": false
 						}
 					],
