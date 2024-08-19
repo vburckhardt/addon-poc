@@ -19,14 +19,6 @@
 			"custom_config": {}
 		},
 		{
-			"name": "cloud_monitoring_crn",
-			"required": false,
-			"type": "string",
-			"hidden": false,
-			"description": "The crn of an existing cloud monitoring instance.",
-			"custom_config": {}
-		},
-		{
 			"name": "existing_resource_group_name",
 			"required": true,
 			"type": "string",

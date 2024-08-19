@@ -3,7 +3,7 @@
 		{
 			"label": "IBM Cloud Essential Security and Observability Services",
 			"name": "deploy-arch-ibm-core-security-svcs",
-			"version": "1.3.1",
+			"version": "1.3.2",
 			"product_kind": "solution",
 			"tags": [
 				"security",
@@ -160,6 +160,38 @@
 							}
 						]
 					},
+					"dependencies": [
+						{
+							"name": "deploy-arch-ibm-observability",
+							"id": "231fad60-b8ac-4540-bc34-ae1e4379d46f-global",
+							"flavors": [
+								"instances"
+							],
+							"catalog_id": "0fbd7aba-de09-43bf-b848-ade81f4ad0ff",
+							"optional": true,							
+							"input_mapping": [
+								{
+									"dependency_output": "cloud_monitoring_crn",
+									"version_input": "cloud_monitoring_crn"
+								}
+							]
+						},
+						{
+							"name": "deploy-arch-ibm-account-infra-base",
+							"id": "9fcd1945-8ebc-4072-85dc-6400653e7077-global",
+							"flavors": [
+								"standard"
+							],
+							"catalog_id": "0fbd7aba-de09-43bf-b848-ade81f4ad0ff",
+							"optional": true,							
+							"input_mapping": [
+								{
+									"dependency_output": "security_group_group_name",
+									"version_input": "existing_resource_group_name"
+								}
+							]
+						}
+					],
 					"release_notes_url": "https://cloud.ibm.com/docs/security-services?topic=security-services-css-relnotes",
 					"configuration": [
 						{
@@ -205,13 +237,6 @@
 									"identifier": "rg_name"
 								}
 							}
-						},
-						{
-							"key": "enable_platform_logs_metrics",
-							"type": "boolean",
-							"default_value": true,
-							"description": "Whether to provision logging and monitoring instances are configured to receive all platform logs and metrics in the target region. There can only be one instance per region provisioned for platform logs/metrics.",
-							"required": false
 						},
 						{
 							"key": "existing_kms_instance_crn",
@@ -276,7 +301,7 @@
 							]
 						}
 					],
-					"install_type": "fullstack"
+					"install_type": "extension"
 				}
 			]
 		}
